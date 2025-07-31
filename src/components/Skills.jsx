@@ -41,7 +41,7 @@ const Skills = () => {
           <SpotlightCard 
             key={index}
             className="h-full"
-            spotlightColor="rgba(255, 255, 255, 0.1)"
+            spotlightColor="rgba(128, 0, 128, 0.5)"
           >
             <h3 className="text-2xl font-semibold text-white mb-6">{skillSet.category}</h3>
             <div className="grid grid-cols-3 gap-8">
