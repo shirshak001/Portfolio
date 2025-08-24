@@ -1,60 +1,17 @@
 import React, { useState, useMemo } from "react";
+import { useNavigate } from 'react-router-dom';
 import MagicBento from './MagicBento';
 import ScrollReveal from './ScrollReveal';
-
-// Project data with categories and tags
-const projects = {
-  software: [
-    {
-      color: "#060010",
-      title: "CredMate",
-      description: "AI-powered credit scoring app for the unbanked.",
-      label: "FinTech",
-      link: "#"
-    },
-    {
-      color: "#060010",
-      title: "Portfolio Website",
-      description: "Modern portfolio with React, TailwindCSS and interactive animations.",
-      label: "Web Dev",
-      link: "#"
-    },
-    {
-      color: "#060010",
-      title: "Task Manager",
-      description: "Productivity app with drag-and-drop interface and local storage.",
-      label: "Web App",
-      link: "#"
-    }
-  ],
-  hardware: [
-    {
-      color: "#060010",
-      title: "Smart Glasses for Blind",
-      description: "Assistive glasses with ESP32-CAM and AI voice recognition.",
-      label: "IoT",
-      link: "#"
-    },
-    {
-      color: "#060010",
-      title: "Line Following Robot",
-      description: "IR sensor-based bot with L298N motor driver and autonomous navigation.",
-      label: "Robotics",
-      link: "#"
-    },
-    {
-      color: "#060010",
-      title: "Weather Station",
-      description: "DIY weather monitoring system with multiple environmental sensors.",
-      label: "Electronics",
-      link: "#"
-    }
-  ]
-};
+import projects from '../data/projects';
 
 const ProjectSection = () => {
+  const navigate = useNavigate();
   const [activeCategory, setActiveCategory] = useState('all');
   const [sortBy, setSortBy] = useState('recent');
+
+  const handleProjectClick = (projectId) => {
+    navigate(`/project/${projectId}`);
+  };
   
   // Get all unique labels from both software and hardware projects
   const categories = useMemo(() => {
@@ -142,6 +99,7 @@ const ProjectSection = () => {
             clickEffect={true}
             enableMagnetism={true}
             glowColor="132, 0, 255"
+            onCardClick={(project) => handleProjectClick(project.id)}
           />
         </div>
       </div>

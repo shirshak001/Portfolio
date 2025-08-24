@@ -12,7 +12,7 @@ const BentoCardGrid = ({ children }) => (
   </div>
 );
 
-const BentoCard = ({
+const BentoCard = React.forwardRef(({
   color,
   title,
   description,
@@ -22,7 +22,7 @@ const BentoCard = ({
   enableBorderGlow,
   glowColor = DEFAULT_GLOW_COLOR,
   onClick
-}) => {
+}, ref) => {
   const cardRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
   
@@ -114,7 +114,7 @@ const BentoCard = ({
       )}
     </div>
   );
-};
+});
 
 const MagicBento = ({
   cardData,
@@ -126,29 +126,22 @@ const MagicBento = ({
 }) => {
   return (
     <BentoCardGrid>
-        {cardData.map((card, index) => (
-          <BentoCard
-            key={card.id || index}
-            {...card}
-            enableSpotlight={enableSpotlight}
-            enableBorderGlow={enableBorderGlow}
-            enableTilt={enableTilt}
-            glowColor={glowColor}
-            onClick={() => onCardClick && onCardClick(card)}
-          >
-            <div className="relative z-10">
-              <span className="text-xs font-medium text-purple-300 bg-purple-900/20 px-2 py-1 rounded-full">
-                {card.label}
-              </span>
-              <h3 className="text-xl font-semibold text-white mt-4 mb-2">
-                {card.title}
-              </h3>
-              <p className="text-sm text-gray-400">{card.description}</p>
-            </div>
-          </BentoCard>
-        ))}
+      {cardData.map((card, index) => (
+        <BentoCard
+          key={card.id || index}
+          {...card}
+          enableSpotlight={enableSpotlight}
+          enableBorderGlow={enableBorderGlow}
+          enableTilt={enableTilt}
+          glowColor={glowColor}
+          onClick={() => onCardClick && onCardClick(card)}
+        />
+      ))}
     </BentoCardGrid>
   );
 };
+
+// Add display names for better debugging
+BentoCard.displayName = 'BentoCard';
 
 export default MagicBento;
