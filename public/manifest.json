@@ -1,0 +1,60 @@
+{
+  "name": "Shirshak Mondal - Full Stack Developer Portfolio",
+  "short_name": "Shirshak Portfolio",
+  "description": "Portfolio website of Shirshak Mondal, a Full Stack Developer and Software Engineer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060010",
+  "theme_color": "#060010",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["portfolio", "developer", "technology"],
+  "shortcuts": [
+    {
+      "name": "View Projects",
+      "short_name": "Projects",
+      "description": "View Shirshak's software and hardware projects",
+      "url": "/#projects"
+    },
+    {
+      "name": "About Me",
+      "short_name": "About",
+      "description": "Learn more about Shirshak Mondal",
+      "url": "/#about"
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Get in touch with Shirshak",
+      "url": "/#contact"
+    }
+  ]
+}

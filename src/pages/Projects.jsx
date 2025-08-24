@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SEO from "../components/SEO";
 import ProjectCard from "../components/ProjectCard";
 import ProjectModal from "../components/ProjectModal";
 
@@ -29,10 +30,16 @@ const hardwareProjects = [
 ];
 
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   return (
     <div className="min-h-screen bg-black text-white p-10">
+      <SEO 
+        title="Projects - Shirshak Mondal | Full Stack Developer Portfolio"
+        description="Explore Shirshak Mondal's software and hardware projects including AI applications, web development, IoT systems, and robotics projects."
+        keywords="Shirshak Mondal projects, software projects, hardware projects, React projects, IoT, robotics, AI applications"
+        canonical="https://portfolioi-shirshak.vercel.app/projects"
+      />
       <h1 className="text-4xl font-bold mb-8 text-center">My Projects</h1>
 
       {/* Software Projects */}

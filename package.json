@@ -1,7 +1,11 @@
 {
-  "name": "my-portfolio",
+  "name": "shirshak-mondal-portfolio",
+  "description": "Portfolio website of Shirshak Mondal - Full Stack Developer and Software Engineer",
+  "version": "1.0.0",
+  "author": "Shirshak Mondal",
+  "keywords": ["portfolio", "full-stack-developer", "react", "javascript", "web-development"],
+  "homepage": "https://portfolioi-shirshak.vercel.app",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",

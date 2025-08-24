@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "../components/SEO";
 import Particles from "../components/Particles";
 import TextType from "../components/TextType";
 import GlareHover from "../components/GlareHover";
@@ -49,6 +50,12 @@ const HomePage = () => {
 
   return (
     <div id="home" className="relative w-full">
+      <SEO 
+        title="Shirshak Mondal - Full Stack Developer & Software Engineer | Portfolio"
+        description="Welcome to Shirshak Mondal's portfolio. I'm a passionate Full Stack Developer specializing in React, Node.js, Python, and modern web technologies. Explore my projects and skills."
+        keywords="Shirshak Mondal, Full Stack Developer, Software Engineer, React, Node.js, Python, Portfolio, Web Developer"
+        canonical="https://portfolioi-shirshak.vercel.app/"
+      />
       {/* Particle Background */}
       <div className="fixed inset-0 -z-10">
         <Particles
